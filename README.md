@@ -28,7 +28,7 @@
 ## Технологии
 * SASS
 * HTML5
-* JS
+* Typescript
 * Next.js
 * React
 
