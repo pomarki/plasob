@@ -3,12 +3,34 @@
   background-color: white;
   padding: 0;
   list-style: none;
-  border: 1px dotted #000;
+  border: 1px dotted rgb(185, 182, 182);
   display: flex;
   flex-direction: row;
 }
 
 .cardItem {
   margin-right: 5px;
-  
+  border-right: 1px dotted rgb(185, 182, 182);
+  text-align: center;
+  width: 100px;
+}
+
+.cardItem__s {
+  width: 25px;
+}
+
+.cardItem__l {
+  width: 40px;
+}
+
+.cardItem__x {
+  width: 60px;
+}
+
+.cardItem__xl {
+  width: 170px;
+}
+
+.cardItem__invisible {
+  display: none;
 }
