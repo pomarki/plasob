@@ -1,6 +1,7 @@
 import styles from "./style.module.css";
 import cn from "classnames";
 import { useState } from "react";
+import { Button } from "../ui";
 
 
 const ObjectCard = ({ id, obj, branch, town, type, address }) => {
@@ -12,6 +13,7 @@ const ObjectCard = ({ id, obj, branch, town, type, address }) => {
       <li className={cn(styles.cardItem, styles.cardItem__s)}>{id}</li>
       <li className={cn(styles.cardItem, styles.cardItem__l)}>{obj}</li>
       <li className={cn(styles.cardItem, styles.cardItem__x)}>{branch}</li>
+      <li><Button title={"i"} size={"s"} /></li>
       <li className={cn(styles.cardItem, styles.cardItem__xl)}>{town}</li>
       <li>{address}</li>
     </ul>

@@ -1,0 +1,19 @@
+.button {
+  border: 0;
+  background-color: gray;
+  padding: 0;
+  transition: opacity 0.4s linear;
+}
+
+.buttonSize_s {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.button:hover {
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+  opacity: 0.6;
+}
