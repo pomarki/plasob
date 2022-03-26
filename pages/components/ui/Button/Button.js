@@ -1,11 +1,22 @@
 import styles from "./style.module.css";
 import cn from "classnames";
 
-const Button = ({ title, type, size }) => {
+const Button = ({ title, type, size, visibility, onClick = () =>{} }) => {
   const buttonSize = "buttonSize_" + size;
+  let isVisible;
+  visibility ? isVisible = "" : isVisible = styles.button_hide;
+
+  function handleClick() {
+    onClick();
+  }
 
   return (
-    <button className={cn(styles.button, styles[buttonSize])}>{title}</button>
+    <button
+      onClick={handleClick}
+      className={cn(styles.button, styles[buttonSize], isVisible)}
+    >
+      {title}
+    </button>
   );
 };
 

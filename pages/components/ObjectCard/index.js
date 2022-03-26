@@ -2,15 +2,18 @@ import styles from "./style.module.css";
 import cn from "classnames";
 import { useState } from "react";
 import { Button } from "../ui";
+import { WorkSchedule } from "../index";
 
-const ObjectCard = ({ id, obj, branch, town, type, address, phone, mode }) => {
-  const [addressVisible, setAddressVisible] = useState(false);
+const ObjectCard = ({ id, obj, branch, town, type, address, phone, mode, month }) => {
+  const [addressVisible, setAddressVisible] = useState(true);
+  let cardItemVisible;
+  addressVisible
+    ? (cardItemVisible = styles.cardItem__invisible)
+    : (cardItemVisible = "");
 
-
-  const onClose = () => {
+  const windowToggle = () => {
     setAddressVisible(!addressVisible);
-    console.log('click!');
-  }
+  };
 
   return (
     <>
@@ -20,16 +23,69 @@ const ObjectCard = ({ id, obj, branch, town, type, address, phone, mode }) => {
         <p className={cn(styles.cardItem, styles.cardItem__x)}>{branch}</p>
         <p className={cn(styles.cardItem, styles.cardItem__xl)}>{town}</p>
         <p className={cn(styles.cardItem, styles.cardItem__s)}>
-          <Button title={"i"} size={"s"} onClick={onClose} />
+          <Button
+            title={"i"}
+            size={"s"}
+            onClick={windowToggle}
+            visibility={true}
+          />
         </p>
-        <p className={cn(styles.cardItem, styles.cardItem__subtitle)}>адрес:</p>
-        <p className={cn(styles.cardItem, styles.cardItem__info)}>{address}</p>
-        <p className={cn(styles.cardItem, styles.cardItem__subtitle)}>телефон:</p>
-        <p className={cn(styles.cardItem, styles.cardItem__info)}>{phone}</p>
-        <p className={cn(styles.cardItem, styles.cardItem__subtitle)}>режим:</p>
-        <p className={cn(styles.cardItem, styles.cardItem__info)}>{mode}</p>
-        <Button title={"свернуть"} size={"xl"} />
+        <p
+          className={cn(
+            styles.cardItem,
+            styles.cardItem__subtitle,
+            cardItemVisible
+          )}
+        >
+          адрес:
+        </p>
+        <p
+          className={cn(
+            styles.cardItem,
+            styles.cardItem__info,
+            cardItemVisible
+          )}
+        >
+          {address}
+        </p>
+        <p
+          className={cn(
+            styles.cardItem,
+            styles.cardItem__subtitle,
+            cardItemVisible
+          )}
+        >
+          телефон:
+        </p>
+        <p
+          className={cn(
+            styles.cardItem,
+            styles.cardItem__info,
+            cardItemVisible
+          )}
+        >
+          {phone}
+        </p>
+        <p
+          className={cn(
+            styles.cardItem,
+            styles.cardItem__subtitle,
+            cardItemVisible
+          )}
+        >
+          режим:
+        </p>
+        <p
+          className={cn(
+            styles.cardItem,
+            styles.cardItem__info,
+            cardItemVisible
+          )}
+        >
+          {mode}
+        </p>
       </div>
+      <WorkSchedule month={month} />
     </>
   );
 };
