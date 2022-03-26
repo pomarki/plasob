@@ -16,6 +16,8 @@ const ObjectCardsList = ({ list }) => {
             branch={item.branch}
             town={item.town}
             address={item.address}
+            phone={item.phone}
+            mode={item.mode}
           />
         );
       })}
