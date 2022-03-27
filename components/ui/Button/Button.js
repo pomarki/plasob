@@ -1,5 +1,6 @@
 import styles from "./style.module.css";
 import cn from "classnames";
+import { arrow } from "icons";
 
 const Button = ({ title, type, size, visibility, onClick = () =>{} }) => {
   const buttonSize = "buttonSize_" + size;

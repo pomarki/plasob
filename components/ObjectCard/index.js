@@ -85,7 +85,7 @@ const ObjectCard = ({ id, obj, branch, town, type, address, phone, mode, month }
           {mode}
         </p>
       </div>
-      <WorkSchedule month={month} />
+      <WorkSchedule month={"1"} />
     </>
   );
 };
