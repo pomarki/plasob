@@ -1,3 +1,14 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg"   width="320" height="200">
-<polygon points="0 0, 50 0, 25 25" fill="none" stroke="black"/>
+<svg width="47.99999999999999" height="47.99999999999999" xmlns="http://www.w3.org/2000/svg">
+ 
+ <g>
+  <title>background</title>
+  <rect fill="#fff" id="canvas_background" height="50" width="50" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path transform="rotate(-90 24.064256668090824,24.023780822753906) " stroke="#000" id="svg_3" d="m24.06426,47.29756c12.8767,0 23.31425,-10.42007 23.31425,-23.27378c0,-12.85373 -10.43754,-23.27378 -23.31425,-23.27378c-12.87607,0 -23.31426,10.42005 -23.31426,23.27378c0,12.8537 10.43819,23.27378 23.31426,23.27378zm3.74558,-38.84522l5.67249,5.66573l-9.92474,9.90693l9.92474,9.90753l-5.67249,5.66386l-15.5967,-15.57139l15.5967,-15.57267l0,0z" stroke-width="1.5" fill="#fff"/>
+ </g>
 </svg>

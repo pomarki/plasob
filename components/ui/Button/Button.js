@@ -1,11 +1,19 @@
 import styles from "./style.module.css";
 import cn from "classnames";
-import { arrow } from "icons";
 
-const Button = ({ title, type, size, visibility, onClick = () =>{} }) => {
+const Button = ({
+  title,
+  type,
+  icon,
+  size,
+  visibility,
+  onClick = () => {},
+}) => {
   const buttonSize = "buttonSize_" + size;
+  const iconType = "button_icon" + icon;
+
   let isVisible;
-  visibility ? isVisible = "" : isVisible = styles.button_hide;
+  visibility ? (isVisible = "") : (isVisible = styles.button_hide);
 
   function handleClick() {
     onClick();
@@ -14,7 +22,12 @@ const Button = ({ title, type, size, visibility, onClick = () =>{} }) => {
   return (
     <button
       onClick={handleClick}
-      className={cn(styles.button, styles[buttonSize], isVisible)}
+      className={cn(
+        styles.button,
+        styles[buttonSize],
+        styles[iconType],
+        isVisible
+      )}
     >
       {title}
     </button>

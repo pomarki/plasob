@@ -4,7 +4,17 @@ import { useState } from "react";
 import { Button } from "../ui";
 import { WorkSchedule } from "../index";
 
-const ObjectCard = ({ id, obj, branch, town, type, address, phone, mode, month }) => {
+const ObjectCard = ({
+  id,
+  obj,
+  branch,
+  town,
+  type,
+  address,
+  phone,
+  mode,
+  month,
+}) => {
   const [addressVisible, setAddressVisible] = useState(true);
   let cardItemVisible;
   addressVisible
@@ -24,8 +34,8 @@ const ObjectCard = ({ id, obj, branch, town, type, address, phone, mode, month }
         <p className={cn(styles.cardItem, styles.cardItem__xl)}>{town}</p>
         <p className={cn(styles.cardItem, styles.cardItem__s)}>
           <Button
-            title={"i"}
             size={"s"}
+            icon={"ArrowDown"}
             onClick={windowToggle}
             visibility={true}
           />
@@ -85,10 +95,9 @@ const ObjectCard = ({ id, obj, branch, town, type, address, phone, mode, month }
           {mode}
         </p>
         <div className={styles.cardWorkSchedule}>
-        <WorkSchedule  month={"1"} />
+          <WorkSchedule month={"1"} />
         </div>
       </div>
-      
     </>
   );
 };
