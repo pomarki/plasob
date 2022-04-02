@@ -3,7 +3,7 @@
   grid-template-columns: 25px 40px 60px 170px 25px 1fr;
   grid-template-rows: repeat(5, max-content);
   gap: 1px;
-  margin-bottom: 5px;
+  margin-bottom: 1px;
 }
 
 .cardItem {
@@ -13,6 +13,7 @@
   margin: 0;
   border: 1px dotted rgb(185, 182, 182);
   background-color: darkgray;
+  cursor: default;
 }
 
 .cardItem__subtitle {
@@ -32,7 +33,6 @@
 .cardItem__turnButton {
   grid-column-start: 1;
   grid-column-end: 6;
-  
 }
 
 .cardItem__invisible {

@@ -1,12 +1,11 @@
 import styles from "./style.module.css";
-import { ObjectCard } from "../index";
+import { Filter, ObjectCard, Title } from "../index";
 
-const ObjectCardsList = ({ list, month }) => {
+const ObjectCardsList = ({ list, month, titlesList }) => {
   return (
     <div className={styles.cardListContainer}>
-      <div>
-        <h2 className={styles.cardListTitle}>title</h2>
-      </div>
+      <Title titlesList={titlesList} />
+      <Filter />
       {list.map((item) => {
         return (
           <ObjectCard
