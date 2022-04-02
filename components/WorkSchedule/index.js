@@ -1,15 +1,13 @@
 import WorkDay from "../WorkDay";
 import actualYear from "configs/configs";
+import styles from "./style.module.css";
+import cn from "classnames";
 
 const WorkSchedule = ({ month, workDays, nonWorkingDays }) => {
-    const date = new Date(`${actualYear}-${month}-1`);
-    /* let monthLength = getMonth(date); */
-
-    console.log(date)
+  const date = new Date(`${actualYear}-${month}-1`);
 
   return (
-    <div>
-
+    <div className={styles.WorkSchedule}>
       <WorkDay isHoliday={false} />
     </div>
   );

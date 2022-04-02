@@ -84,8 +84,11 @@ const ObjectCard = ({ id, obj, branch, town, type, address, phone, mode, month }
         >
           {mode}
         </p>
+        <div className={styles.cardWorkSchedule}>
+        <WorkSchedule  month={"1"} />
+        </div>
       </div>
-      <WorkSchedule month={"1"} />
+      
     </>
   );
 };

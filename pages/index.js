@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import objects from 'configs/odjects';
-import { Header, ObjectCardsList, ObjectCard } from '../components';
+import { Header, ObjectCardsList, ObjectCard, Main } from '../components';
 import { useState } from 'react';
 
 
@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
     <Header />
-    <ObjectCardsList list={objects} month={month} />
+    <Main list={objects} month={month} />
     </>
   )
 }
