@@ -1,7 +1,7 @@
 .plan {
     width: 100%;
     display: grid;
-    grid-template-columns: 326px 1fr 326px;
+    grid-template-columns: 326px 1fr 182px;
     grid-template-rows: 1fr;
 }
 

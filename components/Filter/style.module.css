@@ -1,16 +1,5 @@
 .filter {
-  display: grid;
-  grid-template-columns: 25px 40px 60px 170px 25px;
-  grid-template-rows: repeat(5, max-content);
-  gap: 1px;
+  height: 15px;
   margin-bottom: 1px;
 }
 
-.filterItem {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  border: 1px dotted var(--dark-grey);
-  background: center / contain no-repeat url(../../icons/arrow/filter.svg);
-}

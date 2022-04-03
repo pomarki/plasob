@@ -1,13 +1,12 @@
 import styles from "./style.module.css";
 import cn from "classnames";
+import { Button } from "components/ui";
 
-const Filter = ({ type }) => {
-  return <section className={styles.filter}>
-    <div className={styles.filterItem}></div>
-    <div className={styles.filterItem}></div>
-    <div className={styles.filterItem}></div>
-    <div className={styles.filterItem}>4</div>
-    <div className={styles.filterItem}></div>
-  </section>;
+const Filter = () => {
+  return (
+    <div className={styles.filter}>
+      <Button size={"s"} icon={"ArrowDown"} visibility={true} />
+    </div>
+  );
 };
 export default Filter;
