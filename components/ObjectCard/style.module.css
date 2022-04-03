@@ -11,8 +11,8 @@
   align-items: center;
   justify-content: center;
   margin: 0;
-  border: 1px dotted rgb(185, 182, 182);
-  background-color: darkgray;
+  border: 1px dotted var(--dark-grey);
+  background-color: var(--dark-grey);
   cursor: default;
 }
 
@@ -20,14 +20,14 @@
   grid-column-start: 1;
   grid-column-end: 3;
   justify-content: flex-start;
-  background-color: lightgray;
+  background-color: var(--light-grey);
 }
 
 .cardItem__info {
   grid-column-start: 3;
   grid-column-end: 6;
   justify-content: flex-start;
-  background-color: lightgray;
+  background-color: var(--light-grey);
 }
 
 .cardItem__turnButton {
@@ -44,6 +44,6 @@
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 2;
-  border: 1px black dotted;
-  background-color: aquamarine;
+  border: 1px var(--dark-grey) dotted;
+  background-color: var(--light-grey);
 }

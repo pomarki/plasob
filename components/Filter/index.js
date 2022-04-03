@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import cn from "classnames";
 
-const Filter = () => {
+const Filter = ({ type }) => {
   return <section className={styles.filter}>
     <div className={styles.filterItem}></div>
     <div className={styles.filterItem}></div>

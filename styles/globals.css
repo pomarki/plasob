@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --dark-grey: #7c8285;
+  --light-grey: #bfbdb0;
+  --dark-blue: #00a4e8;
+  --light-blue: #96b8db;
+  --light-yellow: #fdd666;
+  --light-green: #bbd634;
+  --dark-red: #e31a22;
+}
