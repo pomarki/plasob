@@ -9,6 +9,7 @@ const WorkSchedule = ({ month, workDays, nonWorkingDays }) => {
   return (
     <div className={styles.WorkSchedule}>
       <WorkDay isHoliday={false} />
+      1234567
     </div>
   );
 };

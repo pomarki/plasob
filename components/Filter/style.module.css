@@ -1,6 +1,16 @@
 .filter {
-    width: 324px;
-    height: 30px;
-    background-color: rgb(194, 160, 226);
-    margin-bottom: 1px;
+  display: grid;
+  grid-template-columns: 25px 40px 60px 170px 25px;
+  grid-template-rows: repeat(5, max-content);
+  gap: 1px;
+  margin-bottom: 1px;
+}
+
+.filterItem {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 1px dotted rgb(185, 182, 182);
+  background: center / contain no-repeat url(../../icons/arrow/filter.svg);
 }

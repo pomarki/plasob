@@ -1,6 +1,5 @@
 .button {
   border: 0;
-  /* background-color: lightblue; */
   color: white;
   padding: 0;
   transition: opacity 0.4s linear;
@@ -20,9 +19,8 @@
 }
 
 .button_iconArrowDown {
-  background: center / contain no-repeat url(../../../icons/arrow/arrow-small-down.svg);
-  
-
+  background: center / contain no-repeat
+    url(../../../icons/arrow/arrow-small-down.svg);
 }
 
 .button:hover {
