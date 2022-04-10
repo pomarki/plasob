@@ -1,0 +1,18 @@
+.calendarDay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: var(--dark-blue);
+  border: 1px dotted var(--dark-gray);
+  width: 30px;
+}
+
+.calendarDayItem {
+  width: 15px;
+  height: 15px;
+  font-size: 11px;
+  margin: 0;
+  
+}

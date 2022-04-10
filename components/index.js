@@ -1,3 +1,4 @@
+import CalendarDay from "./CalendarDay";
 import DateBar from "./DateBar";
 import Filter from "./Filter";
 import Header from "./Header";
@@ -11,6 +12,7 @@ import WorkSchedule from "./WorkSchedule";
 import WorkDay from "./WorkDay";
 
 export {
+  CalendarDay,
   DateBar,
   Filter,
   Header,

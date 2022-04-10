@@ -2,14 +2,23 @@
 
 import styles from "./style.module.css";
 import cn from "classnames";
+import CalendarDay from "components/CalendarDay";
 
-const DateBar = ({ month }) => {
-  return <div className={styles.dateBar}>
+const DateBar = ({ year, month, holidays }) => {
 
-<div className={styles.dateBarWeek}>1</div>
-<div className={styles.dateBarDates}>2</div>
 
-  </div>;
+  // year = 2020 month = 1
+  // monthDuration - длина месяца беру из массива, 28 и 29 февраля вычисляю функцией checkLeapYear
+
+  return (
+    <div className={styles.dateBar}>
+
+      <CalendarDay date={"01"} />
+    
+    </div>
+  );
 };
 
 export default DateBar;
+
+//

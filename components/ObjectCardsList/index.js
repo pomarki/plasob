@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import { DateBar, Filter, ObjectCard, Title } from "../index";
+import { ObjectCard } from "../index";
 
 const ObjectCardsList = ({ list, month, titlesList }) => {
   return (

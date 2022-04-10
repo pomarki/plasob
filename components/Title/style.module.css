@@ -18,7 +18,7 @@
 
 .titleItem {
   text-align: center;
-  border: 1px dotted var(--dark-grey);
+  border: 1px dotted var(--dark-gray);
 }
 
 .titleName {
