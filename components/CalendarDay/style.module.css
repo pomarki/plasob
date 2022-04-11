@@ -14,5 +14,8 @@
   height: 15px;
   font-size: 11px;
   margin: 0;
-  
+}
+
+.calendarDay_holiday {
+  background-color: var(--light-yellow);
 }

@@ -1,10 +1,16 @@
 import styles from "./style.module.css";
 import cn from "classnames";
 
-const CalendarDay = ({ date }) => {
+const CalendarDay = ({ date, weekDay, holiday }) => {
+  let containerStyle;
+  
+  holiday
+    ? (containerStyle = cn(styles.calendarDay, styles.calendarDay_holiday))
+    : (containerStyle = styles.calendarDay);
+
   return (
-    <div className={styles.calendarDay}>
-      <p className={styles.calendarDayItem}>пн</p>
+    <div className={containerStyle}>
+      <p className={styles.calendarDayItem}>{weekDay}</p>
       <p className={styles.calendarDayItem}>{date}</p>
     </div>
   );

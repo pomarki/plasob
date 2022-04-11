@@ -2,18 +2,23 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import objects from "configs/odjects";
+import holidays from "configs/holiday";
 import { Header, Main } from "../components";
 import { useState } from "react";
 import titles from "configs/titles";
 
 function Home() {
-  const [month, setMonth] = useState(1);
+  const [month, setMonth] = useState(0);
   const [year, setYear] = useState(2022);
   let fullMonth = [];
 
-  // [{id: 1, date: "2022-01-23", weekDay: 3, holiday: true}]
-  //
-  //
+  const getHoliday = (date, arr) => {
+    let dateValue = date.getDate();
+    let monthValue = date.getMonth();
+    let holidayValue = arr[monthValue].days.includes(dateValue);
+
+    return holidayValue;
+  };
 
   const getFullMonth = (year, month) => {
     let currentDay = new Date();
@@ -26,7 +31,7 @@ function Home() {
           date: currentDay.getDate(),
           weekDay: currentDay.getDay(),
           month: currentDay.getMonth(),
-          holiday: false,
+          holiday: getHoliday(currentDay, holidays),
         };
       }
     }
@@ -42,7 +47,7 @@ function Home() {
         year={year}
         month={month}
         titlesList={titles}
-        fullMonth={getFullMonth(2022, 1)}
+        fullMonth={getFullMonth(year, month)}
       />
     </>
   );

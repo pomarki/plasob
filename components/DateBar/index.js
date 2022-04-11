@@ -1,20 +1,21 @@
-/* getDay() */
-
 import styles from "./style.module.css";
 import cn from "classnames";
 import CalendarDay from "components/CalendarDay";
+import weekDays from "configs/week";
 
-const DateBar = ({ year, month, holidays }) => {
-
-
-  // year = 2020 month = 1
-  // monthDuration - длина месяца беру из массива, 28 и 29 февраля вычисляю функцией checkLeapYear
-
+const DateBar = ({ year, month, holidays, fullMonth }) => {
   return (
     <div className={styles.dateBar}>
-
-      <CalendarDay date={"01"} />
-    
+      {fullMonth.map((dateItem) => {
+        return (
+          <CalendarDay
+            key={dateItem.id}
+            date={dateItem.date}
+            weekDay={weekDays[dateItem.weekDay]}
+            holiday={dateItem.holiday}
+          />
+        );
+      })}
     </div>
   );
 };
