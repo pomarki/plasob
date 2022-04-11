@@ -14,7 +14,12 @@ const Plan = ({ list, month, year, holidays, titlesList, fullMonth }) => {
       />
       <Title titlesList={titlesList[1]} type={"s"} />
       <div className={styles.planItem}>
-        <ObjectCardsList list={list} month={month} titlesList={titlesList} />
+        <ObjectCardsList
+          list={list}
+          month={month}
+          titlesList={titlesList}
+          fullMonth={fullMonth}
+        />
       </div>
     </section>
   );

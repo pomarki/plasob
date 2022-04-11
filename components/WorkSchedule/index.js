@@ -3,13 +3,15 @@ import actualYear from "configs/configs";
 import styles from "./style.module.css";
 import cn from "classnames";
 
-const WorkSchedule = ({ month, workDays, nonWorkingDays }) => {
-  const date = new Date(`${actualYear}-${month}-1`);
+const WorkSchedule = ({ month, workDays, nonWorkingDays, fullMonth }) => {
+  
+  const selectActiveDay = () => {}
 
   return (
     <div className={styles.WorkSchedule}>
-      <WorkDay isHoliday={false} />
-      1234567
+      {fullMonth.map((date) => {
+        return <WorkDay key={date.id} id={date.id} date={date.date} isHoliday={date.holiday} />;
+      })}
     </div>
   );
 };

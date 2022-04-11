@@ -14,6 +14,7 @@ const ObjectCard = ({
   phone,
   mode,
   month,
+  fullMonth
 }) => {
   const [addressVisible, setAddressVisible] = useState(true);
   let cardItemVisible;
@@ -95,7 +96,7 @@ const ObjectCard = ({
           {mode}
         </p>
         <div className={styles.cardWorkSchedule}>
-          <WorkSchedule month={"1"} />
+          <WorkSchedule month={"1"} fullMonth={fullMonth}/>
         </div>
       </div>
     </>

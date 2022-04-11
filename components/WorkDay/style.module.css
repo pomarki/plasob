@@ -1,0 +1,18 @@
+.workDay {
+  width: 30px;
+  border: 1px dotted var(--dark-grey);
+  margin: 5px;
+  background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.workDay_holiday {
+  background-color: var(--light-yellow);
+}
+
+.workDay_active {
+  background-color: var(--dark-red);
+}

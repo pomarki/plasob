@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import { ObjectCard } from "../index";
 
-const ObjectCardsList = ({ list, month, titlesList }) => {
+const ObjectCardsList = ({ list, month, titlesList, fullMonth }) => {
   return (
     <section className={styles.cardListContainer}>
       <div>
@@ -17,6 +17,7 @@ const ObjectCardsList = ({ list, month, titlesList }) => {
               phone={item.phone}
               mode={item.mode}
               month={month}
+              fullMonth={fullMonth}
             />
           );
         })}
