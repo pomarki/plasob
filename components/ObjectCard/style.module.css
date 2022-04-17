@@ -44,6 +44,6 @@
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 2;
-  border: 1px var(--dark-gray) dotted;
-  background-color: var(--light-gray);
+  /* border: 1px var(--dark-gray) dotted; */
+  /* background-color: var(--light-gray); */
 }

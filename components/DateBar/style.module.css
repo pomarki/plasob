@@ -1,6 +1,7 @@
 .dateBar {
+  margin-left: 4px;
   width: 100%;
-  background-color: var(--light-gray);
+  /* background-color: var(--light-gray); */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

@@ -3,19 +3,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3px;
-  background-color: var(--dark-blue);
-  border: 1px dotted var(--dark-gray);
   width: 30px;
+  background-color: var(--dark-blue);
+  /* border-radius: 5px; */
+  border: 1px dotted var(--dark-gray);
+  margin: 1px;
+  cursor: default;
 }
 
 .calendarDayItem {
-  width: 15px;
-  height: 15px;
+  
   font-size: 11px;
   margin: 0;
 }
 
 .calendarDay_holiday {
-  background-color: var(--light-yellow);
+  background-color: var(--light-gray);
 }
