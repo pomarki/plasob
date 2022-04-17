@@ -7,6 +7,7 @@ import Navigation from "./Navigation";
 import ObjectCard from "./ObjectCard";
 import ObjectCardsList from "./ObjectCardsList";
 import Plan from "./Plan";
+import PlanHeader from "./PlanHeader";
 import Title from "./Title";
 import WorkSchedule from "./WorkSchedule";
 import WorkDay from "./WorkDay";
@@ -21,6 +22,7 @@ export {
   ObjectCard,
   ObjectCardsList,
   Plan,
+  PlanHeader,
   Title,
   WorkSchedule,
   WorkDay,
