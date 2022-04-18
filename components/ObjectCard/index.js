@@ -2,7 +2,7 @@ import styles from "./style.module.css";
 import cn from "classnames";
 import { useState } from "react";
 import { Button } from "../ui";
-import { WorkSchedule } from "../index";
+import { ObjectCardTotal, WorkSchedule } from "../index";
 
 const ObjectCard = ({
   id,
@@ -14,7 +14,7 @@ const ObjectCard = ({
   phone,
   mode,
   month,
-  fullMonth
+  fullMonth,
 }) => {
   const [addressVisible, setAddressVisible] = useState(true);
   let cardItemVisible;
@@ -96,8 +96,9 @@ const ObjectCard = ({
           {mode}
         </p>
         <div className={styles.cardWorkSchedule}>
-          <WorkSchedule month={"1"} fullMonth={fullMonth}/>
+          <WorkSchedule month={"1"} fullMonth={fullMonth} />
         </div>
+        <div className={styles.cardTotal}><ObjectCardTotal /></div>
       </div>
     </>
   );

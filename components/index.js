@@ -6,6 +6,7 @@ import Main from "./Main";
 import Navigation from "./Navigation";
 import ObjectCard from "./ObjectCard";
 import ObjectCardsList from "./ObjectCardsList";
+import ObjectCardTotal from "./ObjectCardTotal";
 import Plan from "./Plan";
 import PlanHeader from "./PlanHeader";
 import Title from "./Title";
@@ -21,6 +22,7 @@ export {
   Navigation,
   ObjectCard,
   ObjectCardsList,
+  ObjectCardTotal,
   Plan,
   PlanHeader,
   Title,

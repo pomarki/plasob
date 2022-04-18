@@ -1,6 +1,6 @@
 .cardContainer {
   display: grid;
-  grid-template-columns: 25px 40px 60px 170px 25px 1fr;
+  grid-template-columns: 25px 40px 60px 170px 25px max-content 180px;
   grid-template-rows: repeat(5, max-content);
   gap: 1px;
   margin-bottom: 1px;
@@ -27,7 +27,8 @@
   grid-column-start: 3;
   grid-column-end: 6;
   justify-content: flex-start;
-  background-color: var(--light-gray);
+  /* background-color: var(--light-gray); */
+  background-color: #fff;
 }
 
 .cardItem__turnButton {
@@ -44,6 +45,14 @@
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 2;
-  /* border: 1px var(--dark-gray) dotted; */
-  /* background-color: var(--light-gray); */
+/*   border: 1px var(--dark-gray) dotted;
+  background-color: var(--light-gray); */
+}
+
+.cardTotal {
+  width: 182px;
+  grid-column-start: 7;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
