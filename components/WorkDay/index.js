@@ -2,16 +2,15 @@ import styles from "./style.module.css";
 import cn from "classnames";
 import { useState } from "react";
 
-const WorkDay = ({ date, isHoliday }) => {
+const WorkDay = ({ date, isHoliday, onDayClick }) => {
   const [isActiveDay, setActiveDay] = useState(false);
   let containerStyle;
   let activeStyle;
   let attentionStyle;
-  
 
-  const onDayClick = () => {
+  const selectDay = () => {
     setActiveDay(!isActiveDay);
-    
+    onDayClick(date);
   };
 
   isHoliday
@@ -27,7 +26,7 @@ const WorkDay = ({ date, isHoliday }) => {
   return (
     <div
       className={cn(containerStyle, activeStyle, attentionStyle)}
-      onClick={onDayClick}
+      onClick={selectDay}
     >
       <p className={styles.workDay__title}>{isActiveDay ? "V" : ""}</p>
     </div>

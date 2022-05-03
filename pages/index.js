@@ -8,7 +8,7 @@ import { useState } from "react";
 import titles from "configs/titles";
 
 function Home() {
-  const [month, setMonth] = useState(0);
+  const [month, setMonth] = useState(1);
   const [year, setYear] = useState(2022);
   let fullMonth = [];
 

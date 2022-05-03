@@ -17,6 +17,12 @@ const ObjectCard = ({
   fullMonth,
 }) => {
   const [addressVisible, setAddressVisible] = useState(true);
+  const [startDay, setStartDay] = useState(false);
+
+  function chooseWorkingDate(choosenDay) {
+    setStartDay(choosenDay);
+  }
+
   let cardItemVisible;
   addressVisible
     ? (cardItemVisible = styles.cardItem__invisible)
@@ -96,9 +102,11 @@ const ObjectCard = ({
           {mode}
         </p>
         <div className={styles.cardWorkSchedule}>
-          <WorkSchedule month={"1"} fullMonth={fullMonth} />
+          <WorkSchedule month={"1"} fullMonth={fullMonth} onDayClick={chooseWorkingDate}/>
         </div>
-        <div className={styles.cardTotal}><ObjectCardTotal start={"01"} end={"99"} team={"v"} /></div>
+        <div className={styles.cardTotal}>
+          <ObjectCardTotal start={startDay} end={"99"} team={"v"} />
+        </div>
       </div>
     </>
   );

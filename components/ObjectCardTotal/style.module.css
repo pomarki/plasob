@@ -1,4 +1,5 @@
 .totaContainer {
+  margin-top: 1px;
   display: grid;
   /* grid-template-rows: 1fr; */
   grid-template-columns: 60px 60px 60px;

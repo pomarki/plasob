@@ -5,7 +5,7 @@ const ObjectCardTotal = ({start, end, team}) => {
         <div className={styles.totaContainer}>
             <p className={styles.totalItem}>{start}</p>
             <p className={styles.totalItem}>{end}</p>
-            <p className={styles.totalItem}>{team}</p>
+            <p className={styles.totalItem}>{team}</p> {/* тут будет input */}
         </div>
     )
 }
