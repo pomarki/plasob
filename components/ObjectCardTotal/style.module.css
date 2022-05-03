@@ -1,4 +1,13 @@
-.TotalItem {
-    margin: 0;
-    background-color: tomato;
+.totaContainer {
+  display: grid;
+  /* grid-template-rows: 1fr; */
+  grid-template-columns: 60px 60px 60px;
+  gap: 1px;
+}
+
+.totalItem {
+  margin: 0;
+  text-align: center;
+  background-color: tomato;
+  cursor: default;
 }

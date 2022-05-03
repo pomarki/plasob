@@ -1,9 +1,11 @@
 import styles from "./style.module.css"
 
-const ObjectCardTotal = () => {
+const ObjectCardTotal = ({start, end, team}) => {
     return(
-        <div>
-            <p className={styles.TotalItem}>html from total</p>
+        <div className={styles.totaContainer}>
+            <p className={styles.totalItem}>{start}</p>
+            <p className={styles.totalItem}>{end}</p>
+            <p className={styles.totalItem}>{team}</p>
         </div>
     )
 }

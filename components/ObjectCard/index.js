@@ -98,7 +98,7 @@ const ObjectCard = ({
         <div className={styles.cardWorkSchedule}>
           <WorkSchedule month={"1"} fullMonth={fullMonth} />
         </div>
-        <div className={styles.cardTotal}><ObjectCardTotal /></div>
+        <div className={styles.cardTotal}><ObjectCardTotal start={"01"} end={"99"} team={"v"} /></div>
       </div>
     </>
   );
