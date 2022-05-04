@@ -9,6 +9,7 @@
 .totalItem {
   margin: 0;
   text-align: center;
+  border: 1px dotted var(--dark-gray);
   background-color: tomato;
   cursor: default;
 }

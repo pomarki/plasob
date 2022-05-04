@@ -2,7 +2,7 @@ import styles from "./style.module.css";
 import cn from "classnames";
 import { useState } from "react";
 import { Button } from "../ui";
-import { ObjectCardTotal, WorkSchedule } from "../index";
+import { ObjectCardTotal, WorkSchedule, ObjectInfo } from "../index";
 
 const ObjectCard = ({
   id,
@@ -17,8 +17,6 @@ const ObjectCard = ({
   fullMonth,
 }) => {
   const [addressVisible, setAddressVisible] = useState(true);
-  const [startDay, setStartDay] = useState(false);
-  const [expirationDay, setExpirationDay] = useState(false);
   const [workDays, setWorkDays] = useState({ start: 0, finish: 0 });
 
   function chooseWorkingDate(choosenDay) {
@@ -83,60 +81,49 @@ const ObjectCard = ({
             visibility={true}
           />
         </p>
-        <p
-          className={cn(
-            styles.cardItem,
-            styles.cardItem__subtitle,
-            cardItemVisible
-          )}
-        >
-          адрес:
-        </p>
-        <p
-          className={cn(
-            styles.cardItem,
-            styles.cardItem__info,
-            cardItemVisible
-          )}
-        >
-          {address}
-        </p>
-        <p
-          className={cn(
-            styles.cardItem,
-            styles.cardItem__subtitle,
-            cardItemVisible
-          )}
-        >
-          телефон:
-        </p>
-        <p
-          className={cn(
-            styles.cardItem,
-            styles.cardItem__info,
-            cardItemVisible
-          )}
-        >
-          {phone}
-        </p>
-        <p
-          className={cn(
-            styles.cardItem,
-            styles.cardItem__subtitle,
-            cardItemVisible
-          )}
-        >
-          режим:
-        </p>
-        <p
-          className={cn(
-            styles.cardItem,
-            styles.cardItem__info,
-            cardItemVisible
-          )}
-        >
-          {mode}
-        </p>
+       {/*  <ObjectInfo /> */}
+       <p
+        className={cn(
+          styles.cardItem,
+          styles.cardItem__subtitle,
+          cardItemVisible
+        )}
+      >
+        адрес:
+      </p>
+      <p
+        className={cn(styles.cardItem, styles.cardItem__info, cardItemVisible)}
+      >
+        {address}
+      </p>
+      <p
+        className={cn(
+          styles.cardItem,
+          styles.cardItem__subtitle,
+          cardItemVisible
+        )}
+      >
+        телефон:
+      </p>
+      <p
+        className={cn(styles.cardItem, styles.cardItem__info, cardItemVisible)}
+      >
+        {phone}
+      </p>
+      <p
+        className={cn(
+          styles.cardItem,
+          styles.cardItem__subtitle,
+          cardItemVisible
+        )}
+      >
+        режим:
+      </p>
+      <p
+        className={cn(styles.cardItem, styles.cardItem__info, cardItemVisible)}
+      >
+        {mode}
+      </p>
         <div className={styles.cardWorkSchedule}>
           <WorkSchedule
             month={"1"}
@@ -148,7 +135,7 @@ const ObjectCard = ({
           <ObjectCardTotal
             start={workDays.start}
             end={workDays.finish}
-            team={"v"}
+            team={"V"}
           />
         </div>
       </div>
