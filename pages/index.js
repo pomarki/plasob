@@ -32,6 +32,7 @@ function Home() {
           weekDay: currentDay.getDay(),
           month: currentDay.getMonth(),
           holiday: getHoliday(currentDay, holidays),
+          isActive: false,
         };
       }
     }
