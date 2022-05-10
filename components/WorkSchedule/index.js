@@ -7,14 +7,14 @@ const WorkSchedule = ({
   month,
   workDays,
   nonWorkingDays,
-  fullMonth,
+  currentWorkMonth,
   onDayClick,
 }) => {
   const selectActiveDay = () => {};
 
   return (
     <div className={styles.WorkSchedule}>
-      {fullMonth.map((date) => {
+      {currentWorkMonth.map((date) => {
         return (
           <WorkDay
             key={date.id}

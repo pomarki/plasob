@@ -14,18 +14,13 @@ const ObjectCard = ({
   phone,
   mode,
   month,
-  fullMonth,
+  currentWorkMonth,
+  chooseWorkingDate,
 }) => {
   const [addressVisible, setAddressVisible] = useState(true);
   const [workDays, setWorkDays] = useState({ start: 0, finish: 0 });
 
-  function chooseWorkingDate(choosenDay) {
-    let durationWork = workDays.finish - workDays.start + 1;
-    let workObj = { start: 0, finish: 0 };
-    let isActive = fullMonth[choosenDay - 1].isActive;
 
-    
-  }
 
   let cardItemVisible;
   addressVisible
@@ -97,7 +92,7 @@ const ObjectCard = ({
         <div className={styles.cardWorkSchedule}>
           <WorkSchedule
             month={"1"}
-            fullMonth={fullMonth}
+            currentWorkMonth={currentWorkMonth}
             onDayClick={chooseWorkingDate}
           />
         </div>
